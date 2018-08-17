@@ -1,0 +1,30 @@
+addons:
+  apt:
+    packages:
+      - texlive-publishers
+      - texlive-lang-portuguese
+      - texlive-latex-extra
+      - texlive-fonts-recommended
+      - texlive-science
+      - latex-xcolor
+
+cache:
+  apt: true
+
+script:
+  - mkdir _build
+  - python texliveonfly.py sbc-template.tex
+  - python texliveonfly.py sbc-template.tex
+  - python texliveonfly.py sbc-template.tex
+
+before_deploy:
+  - git tag "v$(date +'%Y.%m.%d.%H%M')"
+
+deploy:
+  provider: releases
+  api_key: $GIT_TOKEN
+  file: 
+    - ./_build/sbc-template.pdf
+  skip_cleanup: true
+  on:
+    branch: master
