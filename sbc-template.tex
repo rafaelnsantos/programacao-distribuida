@@ -1,4 +1,3 @@
-% !TeX encoding = ISO-8859-1
 \documentclass[12pt]{article}
 
 \usepackage{sbc-template}
@@ -11,7 +10,7 @@
      
 \sloppy
 
-\title{NFC -- Near Field Communication}
+\title{Serverless GraphQL API na Amazon AWS}
 
 \author{Harrison Borges\inst{1}, Rafael Santos\inst{1}}
 
@@ -34,15 +33,14 @@
 \end{abstract}
      
 \begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo. téstê ãcèntõ
+  \say{Foque no aplicativo, não na infraestrutura}
+  Este meta-artigo descreve os beneficios da arquitetura Serverless e como configurar uma API GraphQL utilizando os serviços da Amazon.
+  \begin{itemize}
+   \item API Gateway - serviço para criar, publicar, manter, monitorar e protejer APIs em qualquer escala.
+   \item Lambda - serviço que permite a execução de códigos sem provisionar ou gerenciar servidores. Paga-se apenas pelo tempo de computação utilizado.
+   \item Aurora Serverless - serviço com escalabilidade automática sob demanda, no qual o banco de dados será iniciado, desligado e aumentado/diminuído automaticamente com base nas necessidades do aplicativo.
+\end{itemize}
 \end{resumo}
-
 
 \section{General Information}
 
