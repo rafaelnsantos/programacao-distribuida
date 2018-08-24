@@ -33,28 +33,41 @@
 \end{abstract}
      
 \begin{resumo} 
-  \say{Foque no aplicativo, não na infraestrutura}
-  Este meta-artigo descreve os beneficios da arquitetura Serverless e como configurar uma API GraphQL utilizando os serviços da Amazon.
-  \begin{itemize}
-   \item API Gateway - serviço para criar, publicar, manter, monitorar e protejer APIs em qualquer escala.
-   \item Lambda - serviço que permite a execução de códigos sem provisionar ou gerenciar servidores. Paga-se apenas pelo tempo de computação utilizado.
-   \item Aurora Serverless - serviço com escalabilidade automática sob demanda, no qual o banco de dados será iniciado, desligado e aumentado/diminuído automaticamente com base nas necessidades do aplicativo.
-\end{itemize}
+
+  Serverless é um modelo de execução de computação na nuvem onde o provedor da 
+  nuvem gerencia dinamicamente a alocação dos servidores, sendo ativados 
+  somente quando acionados.
+  
+  GraphQL é uma linguagem de query para APIs. GraphQL fornece a descrição 
+  completa e compreensível dos dados da API, da ao cliente o poder de pedir 
+  exatamente o que precisa.
+  
+  Este meta-artigo descreve os beneficios da arquitetura Serverless e como 
+  configurar uma API GraphQL utilizando os serviços da Amazon.
+
 \end{resumo}
 
 \section{General Information}
 
-All full papers and posters (short papers) submitted to some SBC conference,
-including any supporting documents, should be written in English or in
-Portuguese. The format paper should be A4 with single column, 3.5 cm for upper
-margin, 2.5 cm for bottom margin and 3.0 cm for lateral margins, without
-headers or footers. The main font must be Times, 12 point nominal size, with 6
-points of space before each paragraph. Page numbers must be suppressed.
+  \say{Foque no aplicativo, não na infraestrutura}
+  
+  Serviços utilizados:
+  
+  \begin{itemize}
+  
+     \item Lambda - serviço que permite a execução de códigos sem provisionar 
+     ou gerenciar servidores. Paga-se apenas pelo tempo de computação utilizado.    
+    
+    \item API Gateway - serviço para criar, publicar, manter, monitorar e 
+     protejer APIs em qualquer escala.
 
-Full papers must respect the page limits defined by the conference.
-Conferences that publish just abstracts ask for \textbf{one}-page texts.
+    \item Aurora Serverless - serviço com escalabilidade automática sob demanda, 
+     no qual o banco de dados será iniciado, desligado e aumentado/diminuído 
+     automaticamente com base nas necessidades do aplicativo.
+  
+  \end{itemize}
 
-\section{First Page} \label{sec:firstpage}
+\section{Lambda} \label{sec:firstpage}
 
 The first page must display the paper title, the name and address of the
 authors, the abstract in English and ``resumo'' in Portuguese (``resumos'' are
@@ -71,7 +84,7 @@ The abstract and ``resumo'' (if is the case) must be in 12 point Times font,
 indented 0.8cm on both sides. The word \textbf{Abstract} and \textbf{Resumo},
 should be written in boldface and must precede the text.
 
-\section{CD-ROMs and Printed Proceedings}
+\section{API Gateway}
 
 In some conferences, the papers are published on CD-ROM while only the
 abstract is published in the printed Proceedings. In this case, authors are
@@ -79,7 +92,7 @@ invited to prepare two final versions of the paper. One, complete, to be
 published on the CD and the other, containing only the first page, with
 abstract and ``resumo'' (for papers in Portuguese).
 
-\section{Sections and Paragraphs}
+\section{Aurora Serverless}
 
 Section titles must be in boldface, 13pt, flush left. There should be an extra
 12 pt of space before each title. Section numbering is optional. The first
